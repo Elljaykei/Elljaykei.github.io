@@ -1,0 +1,46 @@
+
+.head{
+    width: 60%;
+    float: left;
+}
+.image1{
+  width: 30%;
+  float: right;
+  height: auto;
+}
+.intro{
+  line-height: 30px;
+  max-height: 350px;
+  padding-right: 50px;
+}
+.body{
+  float: right;
+  width: 60%;
+}
+.why{
+  line-height: 30px;
+  max-height: 350px;
+}
+.image2{
+  padding-top: 50px;
+  float: left;
+}
+.second{
+  display: inline-block;
+}
+.whole{
+  margin:0px 10% 0px 10%;
+}
+@media only screen and (max-width:1030px) {
+  .head, .image1{
+    display: block;
+    overflow-y: scroll;
+    width: 100%;
+    text-align: center;
+  }
+  .body, .image2{
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}

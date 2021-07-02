@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/subscribed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Newsletter</title>
+  </head>
+  <body>
+    <header>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">My Library</a>
+        <a href="index.html">Home</a>
+        <a href="recent.html">My Recently Read</a>
+        <a href="favourites.html">My Favourites</a>
+        <a href="recommend.html">Recommendations for You</a>
+        <a href="#"><span>Newsletter</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+    <script type="text/javascript">
+
+      var formData = location.search;
+
+      formData = formData.substring(1, formData.length);
+      while (formData.indexOf("+") != -1) {
+      	formData = formData.replace("+", " ");
+      }
+      formData = unescape(formData);
+      var formArray = formData.split("&");
+      var userName = formArray[0].split("=")[1];
+      var userEmail = formArray[1].split("=")[1];
+      var userNumber = formArray[2].split("=")[1];
+    	document.writeln("<h1>Hi "+userName+"!</h1>");
+      document.writeln("Thank you for opting to subscribe to our newsletter! You should be receiving recommendations at "+userEmail+" soon!<br>");
+      document.writeln("We will also drop you a message at "+userNumber+".<br>");
+
+
+
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+
+    </script>
+    <button type="button" name="button"><a href="newsletter.html">Back</a> </button>
+  </body>
+</html>

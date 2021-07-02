@@ -1,0 +1,7 @@
+form{
+  margin: 0 20% 0 20%;
+  padding: 40px;
+}
+label,input{
+  margin: 5px;
+}

@@ -1,0 +1,39 @@
+.whole{
+  margin: 0px 15% 0px 10%;
+}
+
+.book1{
+  width: 50%;
+  float: left;
+}
+.image1{
+  width: 20%;
+  float: right;
+}
+.second{
+  padding-top: 50px;
+  margin-top: 50px;
+}
+.book2{
+  float: right;
+  width: 50%;
+  margin-top: 60px;
+}
+.image2{
+  padding-top: 50px;
+  width: 30%;
+  float: left;
+}
+@media only screen and (max-width:1400px) {
+  .book1, .image1{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: none;
+  }
+  .book2, .image2{
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}
