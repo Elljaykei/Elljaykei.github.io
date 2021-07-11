@@ -1,264 +1,267 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-wdith, inital-scale=1.0">
-<title>Form Processor</title>
-<style>
-  body{
-    background-image: linear-gradient(to bottom right, grey, black);
-    background-repeat: no-repeat;
-    color: white;
-    overflow-x: hidden;
-    margin: 0px;
-  }
-</style>
-</head>
-<body>
-<script type="text/javascript">
-<!-- HIDE FROM INCOMPATIBLE BROWSERS
 
-var formData = location.search;
-formData = formData.substring(1, formData.length);
-while (formData.indexOf("+") != -1) {
-	formData = formData.replace("+", " ");
-}
-formData = unescape(formData);
-var formArray = formData.split("&");
-var para=new Array();
+<head>
+      <meta name="viewport" content="width=device-wdith, inital-scale=1.0">
+      <title>Form Processor</title>
+      <style>
+            body {
+                  background-image: linear-gradient(to bottom right, grey, black);
+                  background-repeat: no-repeat;
+                  color: white;
+                  overflow-x: hidden;
+                  margin: 0px;
+            }
+      </style>
+</head>
+
+<body>
+      <script type="text/javascript">
+// HIDE FROM INCOMPATIBLE BROWSERS
+
+            var formData = location.search;
+            formData = formData.substring(1, formData.length);
+            while (formData.indexOf("+") != -1) {
+                  formData = formData.replace("+", " ");
+            }
+            formData = unescape(formData);
+            var formArray = formData.split("&");
+            var para = new Array();
 
 // STOP HIDING FROM INCOMPATIBLE BROWSERS -->
-</script>
-<article>
-  <center>
-    <h1 style="Color: white; font-size: 50px; background-color: teal; padding: 20px;"> Order details</h1>
-    <br>
-    <h1 style="color: teal;">Classical Guitar v1</h1>
-    <p>Type:</p><br>
-    <span id="s1"></span>
-    <p>Quantity:</p><br>
-    <span id=q1></span>
-    <p>length:</p><br>
-    <span id=r1></span>
-    <br><br>
-    <h1 style="color: teal;">Classical Guitar v2</h1>
-    <p>Type:</p><br>
-    <span id="s2"></span>
-    <p>Quantity:</p><br>
-    <span id=q2></span>
-    <p>length:</p><br>
-    <span id=r2></span>
-    <br><br>
-    <h1 style="color: teal;">Accoustic Guitar v1</h1>
-    <p>Type:</p><br>
-    <span id="s3"></span>
-    <p>Quantity:</p><br>
-    <span id=q3></span>
-    <p>length:</p><br>
-    <span id=r3></span>
-    <br><br>
-    <h1 style="color: teal;">Accoustic Guitar v2</h1>
-    <p>Type:</p><br>
-    <span id="s4"></span>
-    <p>Quantity:</p><br>
-    <span id=q4></span>
-    <p>length:</p><br>
-    <span id=r4></span>
-    <br><br>
-    <h1 style="color: teal;">Classical Guitar v3</h1>
-    <p>Type:</p><br>
-    <span id="s5"></span>
-    <p>Quantity:</p><br>
-    <span id=q5></span>
-    <p>length:</p><br>
-    <span id=r5></span>
-    <br><br>
-    <h1 style="color: teal;">Accoustic Guitar v3</h1>
-    <p>Type:</p><br>
-    <span id="s6"></span>
-    <p>Quantity:</p><br>
-    <span id=q6></span>
-    <p>length:</p><br>
-    <span id=r6></span>
-    <br><br>
-    <h1 style="color: teal;">Plain Strings</h1>
-    <p>Type:</p><br>
-    <span id="s7"></span>
-    <p>Quantity:</p><br>
-    <span id=q7></span>
-    <br><br>
-    <h1 style="color: teal;">Colored Strings</h1>
-    <p>Type:</p><br>
-    <span id="s8"></span>
-    <p>Quantity:</p><br>
-    <span id=q8></span>
-    <br><br>
-    <h1 style="color: teal;">Half colored Strings</h1>
-    <p>Type:</p><br>
-    <span id="s9"></span>
-    <p>Quantity:</p><br>
-    <span id=q9></span>
-    <br><br>
-    <h1 style="color: teal;">Plain Strings</h1>
-    <p>Type:</p><br>
-    <span id="s10"></span>
-    <p>Quantity:</p><br>
-    <span id=q10></span>
-    <br><br>
-    <h1 style="color: teal;">Plain Strings</h1>
-    <p>Type:</p><br>
-    <span id="s11"></span>
-    <p>Quantity:</p><br>
-    <span id=q11></span>
-    <br><br>
-    <h1 style="color: teal;">Plain Strings</h1>
-    <p>Type:</p><br>
-    <span id="s12"></span>
-    <p>Quantity:</p><br>
-    <span id=q12></span>
-    <br><br>
-    <h1 style="color: teal;">Plain Strings</h1>
-    <p>Type:</p><br>
-    <span id="s13"></span>
-    <p>Quantity:</p><br>
-    <span id=q13></span>
-    <br><br>
-    <h1 style="color: teal;">Plain Strings</h1>
-    <p>Type:</p><br>
-    <span id="s14"></span>
-    <p>Quantity:</p><br>
-    <span id=q14></span>
-    <br><br>
-    <h1 style="color: teal;">Plain Strings</h1>
-    <p>Type:</p><br>
-    <span id="s15"></span>
-    <p>Quantity:</p><br>
-    <span id=q15></span>
-    <br><br>
-    <a href="store.html" style="text-decoration: none; color: teal; font-size: 30px;">Go back</a>
-    <br><br>
-    <hr>
+      </script>
+      <article>
+            <center>
+                  <h1 style="Color: white; font-size: 50px; background-color: teal; padding: 20px;"> Order details</h1>
+                  <br>
+                  <h1 style="color: teal;">Classical Guitar v1</h1>
+                  <p>Type:</p><br>
+                  <span id="s1"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q1></span>
+                  <p>length:</p><br>
+                  <span id=r1></span>
+                  <br><br>
+                  <h1 style="color: teal;">Classical Guitar v2</h1>
+                  <p>Type:</p><br>
+                  <span id="s2"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q2></span>
+                  <p>length:</p><br>
+                  <span id=r2></span>
+                  <br><br>
+                  <h1 style="color: teal;">Accoustic Guitar v1</h1>
+                  <p>Type:</p><br>
+                  <span id="s3"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q3></span>
+                  <p>length:</p><br>
+                  <span id=r3></span>
+                  <br><br>
+                  <h1 style="color: teal;">Accoustic Guitar v2</h1>
+                  <p>Type:</p><br>
+                  <span id="s4"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q4></span>
+                  <p>length:</p><br>
+                  <span id=r4></span>
+                  <br><br>
+                  <h1 style="color: teal;">Classical Guitar v3</h1>
+                  <p>Type:</p><br>
+                  <span id="s5"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q5></span>
+                  <p>length:</p><br>
+                  <span id=r5></span>
+                  <br><br>
+                  <h1 style="color: teal;">Accoustic Guitar v3</h1>
+                  <p>Type:</p><br>
+                  <span id="s6"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q6></span>
+                  <p>length:</p><br>
+                  <span id=r6></span>
+                  <br><br>
+                  <h1 style="color: teal;">Plain Strings</h1>
+                  <p>Type:</p><br>
+                  <span id="s7"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q7></span>
+                  <br><br>
+                  <h1 style="color: teal;">Colored Strings</h1>
+                  <p>Type:</p><br>
+                  <span id="s8"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q8></span>
+                  <br><br>
+                  <h1 style="color: teal;">Half colored Strings</h1>
+                  <p>Type:</p><br>
+                  <span id="s9"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q9></span>
+                  <br><br>
+                  <h1 style="color: teal;">Plain Strings</h1>
+                  <p>Type:</p><br>
+                  <span id="s10"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q10></span>
+                  <br><br>
+                  <h1 style="color: teal;">Plain Strings</h1>
+                  <p>Type:</p><br>
+                  <span id="s11"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q11></span>
+                  <br><br>
+                  <h1 style="color: teal;">Plain Strings</h1>
+                  <p>Type:</p><br>
+                  <span id="s12"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q12></span>
+                  <br><br>
+                  <h1 style="color: teal;">Plain Strings</h1>
+                  <p>Type:</p><br>
+                  <span id="s13"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q13></span>
+                  <br><br>
+                  <h1 style="color: teal;">Plain Strings</h1>
+                  <p>Type:</p><br>
+                  <span id="s14"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q14></span>
+                  <br><br>
+                  <h1 style="color: teal;">Plain Strings</h1>
+                  <p>Type:</p><br>
+                  <span id="s15"></span>
+                  <p>Quantity:</p><br>
+                  <span id=q15></span>
+                  <br><br>
+                  <a href="store.html" style="text-decoration: none; color: teal; font-size: 30px;">Go back</a>
+                  <br><br>
+                  <hr>
 
-  </center>
-</article>
-<script>
-for (var i=0; i < formArray.length; ++i) {
+            </center>
+      </article>
+      <script>
+            for (var i = 0; i < formArray.length; ++i) {
 
-	para=formArray[i].split("=");
+                  para = formArray[i].split("=");
 
-	switch (para[0]) {
-		case "s1":
-					document.getElementById("s1").innerHTML=para[1];
-					break;
-		case "q1":
-					document.getElementById("q1").innerHTML=para[1];
-					break;
-    case "r1":
-      		document.getElementById("r1").innerHTML=para[1];
-      		break;
-		case "s2":
-					document.getElementById("s2").innerHTML=para[1];
-					break;
-		case "q2":
-					document.getElementById("q2").innerHTML=para[1];
-					break;
-    case "r2":
-          document.getElementById("r2").innerHTML=para[1];
-          break;
-		case "s3":
-					document.getElementById("s3").innerHTML=para[1];
-					break;
-		case "q3":
-					document.getElementById("q3").innerHTML=para[1];
-					break;
-    case "r3":
-          document.getElementById("r3").innerHTML=para[1];
-      		break;
-    case "s4":
-      		document.getElementById("s4").innerHTML=para[1];
-      		break;
-    case "q4":
-         document.getElementById("q4").innerHTML=para[1];
-         break;
-    case "r4":
-         document.getElementById("r4").innerHTML=para[1];
-         break;
-    case "s5":
-         document.getElementById("s5").innerHTML=para[1];
-         break;
-    case "q5":
-         document.getElementById("q5").innerHTML=para[1];
-         break;
-    case "r5":
-         document.getElementById("r5").innerHTML=para[1];
-         break;
-    case "s6":
-          document.getElementById("s6").innerHTML=para[1];
-          break;
-    case "q6":
-          document.getElementById("q6").innerHTML=para[1];
-          break;
-    case "r6":
-          document.getElementById("r6").innerHTML=para[1];
-          break;
-    case "s7":
-          document.getElementById("s7").innerHTML=para[1];
-          break;
-    case "q7":
-          document.getElementById("s7").innerHTML=para[1];
-          break;
-    case "s8":
-          document.getElementById("s8").innerHTML=para[1];
-          break;
-    case "q8":
-          document.getElementById("q8").innerHTML=para[1];
-          break;
-    case "s9":
-          document.getElementById("s9").innerHTML=para[1];
-          break;
-    case "q9":
-          document.getElementById("q9").innerHTML=para[1];
-          break;
-    case "s10":
-          document.getElementById("s10").innerHTML=para[1];
-          break;
-    case "q10":
-          document.getElementById("q10").innerHTML=para[1];
-          break;
-    case "s11":
-          document.getElementById("s11").innerHTML=para[1];
-          break;
-    case "q11":
-          document.getElementById("q11").innerHTML=para[1];
-          break;
-    case "s12":
-          document.getElementById("s12").innerHTML=para[1];
-          break;
-    case "q12":
-          document.getElementById("q12").innerHTML=para[1];
-          break;
-    case "s13":
-          document.getElementById("s13").innerHTML=para[1];
-          break;
-    case "q13":
-          document.getElementById("q13").innerHTML=para[1];
-          break;
-    case "s14":
-          document.getElementById("s14").innerHTML=para[1];
-          break;
-    case "q14":
-          document.getElementById("q14").innerHTML=para[1];
-          break;
-    case "s15":
-          document.getElementById("s15").innerHTML=para[1];
-          break;
-    case "q15":
-          document.getElementById("q15").innerHTML=para[1];
-          break;
-    }
+                  switch (para[0]) {
+                        case "s1":
+                              document.getElementById("s1").innerHTML = para[1];
+                              break;
+                        case "q1":
+                              document.getElementById("q1").innerHTML = para[1];
+                              break;
+                        case "r1":
+                              document.getElementById("r1").innerHTML = para[1];
+                              break;
+                        case "s2":
+                              document.getElementById("s2").innerHTML = para[1];
+                              break;
+                        case "q2":
+                              document.getElementById("q2").innerHTML = para[1];
+                              break;
+                        case "r2":
+                              document.getElementById("r2").innerHTML = para[1];
+                              break;
+                        case "s3":
+                              document.getElementById("s3").innerHTML = para[1];
+                              break;
+                        case "q3":
+                              document.getElementById("q3").innerHTML = para[1];
+                              break;
+                        case "r3":
+                              document.getElementById("r3").innerHTML = para[1];
+                              break;
+                        case "s4":
+                              document.getElementById("s4").innerHTML = para[1];
+                              break;
+                        case "q4":
+                              document.getElementById("q4").innerHTML = para[1];
+                              break;
+                        case "r4":
+                              document.getElementById("r4").innerHTML = para[1];
+                              break;
+                        case "s5":
+                              document.getElementById("s5").innerHTML = para[1];
+                              break;
+                        case "q5":
+                              document.getElementById("q5").innerHTML = para[1];
+                              break;
+                        case "r5":
+                              document.getElementById("r5").innerHTML = para[1];
+                              break;
+                        case "s6":
+                              document.getElementById("s6").innerHTML = para[1];
+                              break;
+                        case "q6":
+                              document.getElementById("q6").innerHTML = para[1];
+                              break;
+                        case "r6":
+                              document.getElementById("r6").innerHTML = para[1];
+                              break;
+                        case "s7":
+                              document.getElementById("s7").innerHTML = para[1];
+                              break;
+                        case "q7":
+                              document.getElementById("s7").innerHTML = para[1];
+                              break;
+                        case "s8":
+                              document.getElementById("s8").innerHTML = para[1];
+                              break;
+                        case "q8":
+                              document.getElementById("q8").innerHTML = para[1];
+                              break;
+                        case "s9":
+                              document.getElementById("s9").innerHTML = para[1];
+                              break;
+                        case "q9":
+                              document.getElementById("q9").innerHTML = para[1];
+                              break;
+                        case "s10":
+                              document.getElementById("s10").innerHTML = para[1];
+                              break;
+                        case "q10":
+                              document.getElementById("q10").innerHTML = para[1];
+                              break;
+                        case "s11":
+                              document.getElementById("s11").innerHTML = para[1];
+                              break;
+                        case "q11":
+                              document.getElementById("q11").innerHTML = para[1];
+                              break;
+                        case "s12":
+                              document.getElementById("s12").innerHTML = para[1];
+                              break;
+                        case "q12":
+                              document.getElementById("q12").innerHTML = para[1];
+                              break;
+                        case "s13":
+                              document.getElementById("s13").innerHTML = para[1];
+                              break;
+                        case "q13":
+                              document.getElementById("q13").innerHTML = para[1];
+                              break;
+                        case "s14":
+                              document.getElementById("s14").innerHTML = para[1];
+                              break;
+                        case "q14":
+                              document.getElementById("q14").innerHTML = para[1];
+                              break;
+                        case "s15":
+                              document.getElementById("s15").innerHTML = para[1];
+                              break;
+                        case "q15":
+                              document.getElementById("q15").innerHTML = para[1];
+                              break;
+                  }
 
-}
+            }
 
 
-</script>
+      </script>
 </body>
-</html> 
+
+</html>
