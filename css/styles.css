@@ -12008,7 +12008,10 @@ section#contact {
 .system-inspect { align-self: flex-start; color: var(--site-cyan); font-family: Inter, "Segoe UI", sans-serif; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.05em; text-decoration: none; text-transform: uppercase; }
 .system-inspect i { margin-left: 0.35rem; transition: transform 160ms ease; }
 .system-inspect:hover i, .system-inspect:focus i { transform: translateX(0.25rem); }
-.system-modal { z-index: 1060; }
+.portfolio-modal { z-index: 1060; }
+.portfolio-modal.is-open { display: block; opacity: 1; overflow-x: hidden; overflow-y: auto; }
+.portfolio-modal.is-open .modal-dialog { transform: none; }
+.portfolio-modal-backdrop { z-index: 1055; }
 .system-modal.is-open { display: block; opacity: 1; overflow-x: hidden; overflow-y: auto; }
 .system-modal.is-open .modal-dialog { transform: none; }
 .system-modal-backdrop { z-index: 1055; }
@@ -12042,4 +12045,8 @@ section#contact {
 .snapshot-lines i { display: block; width: 92%; height: 6px; border-radius: 99px; background: rgba(52,215,255,0.13); }
 .snapshot-lines i:nth-child(2) { width: 76%; }.snapshot-lines i:nth-child(3) { width: 56%; }
 .snapshot-caption { display: block; padding: 0 1rem 1rem; color: #71869a; font: 0.65rem/1.4 Inter, sans-serif; }
+.system-snapshot.actual-snapshot { min-height: 0; }
+.system-snapshot.actual-snapshot img { display: block; width: 100%; height: auto; border-radius: 0; }
+.snapshot-unavailable { display: grid; place-content: center; min-height: 220px; padding: 2rem; color: var(--site-muted); text-align: center; }
+.snapshot-unavailable strong { color: var(--site-text); }
 @media (max-width: 767.98px) { .system-modal-layout { grid-template-columns: 1fr; } .snapshot-grid { grid-template-columns: 1fr; } .snapshot-sidebar { display: none; } .snapshot-panels { grid-template-columns: 1fr; } }
