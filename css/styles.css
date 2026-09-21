@@ -11809,6 +11809,42 @@ section#contact {
   border-radius: 8px;
 }
 
+.orbital-recognition {
+  max-width: 420px;
+  margin: 1.5rem auto 2rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 25, 45, 0.45);
+  border-radius: 8px;
+  background: rgba(38, 8, 16, 0.5);
+  text-align: center;
+}
+
+.orbital-recognition img {
+  width: 180px;
+  margin-bottom: 1rem !important;
+  border-radius: 0 !important;
+}
+
+.orbital-recognition p {
+  margin-bottom: 1rem;
+  color: var(--site-muted);
+}
+
+.orbital-recognition strong {
+  color: #ff5260;
+}
+
+.orbital-recognition .btn {
+  color: #ff7b85;
+  border-color: rgba(255, 82, 96, 0.65);
+}
+
+.orbital-recognition .btn:hover {
+  color: #160509;
+  background: #ff5260;
+  border-color: #ff5260;
+}
+
 .portfolio-modal .close-modal {
   filter: invert(1);
 }
@@ -11869,4 +11905,98 @@ section#contact {
     margin-top: 0.35rem;
     overflow-wrap: anywhere;
   }
+}
+
+/* Hermes-built systems */
+.systems-section {
+  background: #06101d;
+  border-top: 1px solid var(--site-border);
+  border-bottom: 1px solid var(--site-border);
+}
+
+.section-eyebrow {
+  margin-bottom: 0.8rem;
+  color: var(--site-cyan);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.systems-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(52, 215, 255, 0.22);
+  border-left: 3px solid var(--site-cyan);
+  border-radius: 8px;
+  background: rgba(10, 28, 48, 0.72);
+}
+
+.systems-intro-mark {
+  display: grid;
+  flex: 0 0 3rem;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 8px;
+  color: var(--site-cyan);
+  background: rgba(52, 215, 255, 0.1);
+  font-size: 1.3rem;
+}
+
+.systems-intro h3 {
+  margin-bottom: 0.45rem;
+  color: var(--site-text);
+  font-size: 1.22rem;
+}
+
+.systems-intro p { margin-bottom: 0; }
+
+.systems-grid { margin: 0 -0.6rem; }
+.systems-grid > div { padding: 0 0.6rem; }
+
+.system-card {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--site-border);
+  border-radius: 8px;
+  background: rgba(10, 22, 39, 0.86);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.system-card:hover {
+  border-color: rgba(52, 215, 255, 0.45);
+  background: rgba(12, 29, 49, 0.96);
+  transform: translateY(-3px);
+}
+
+.system-card-featured { border-top: 2px solid var(--site-cyan); }
+.system-card-top { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 1.25rem; }
+.system-icon { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; border-radius: 8px; font-size: 1.15rem; }
+.system-icon-cyan { color: var(--site-cyan); background: rgba(52, 215, 255, 0.12); }
+.system-icon-blue { color: #6da9ff; background: rgba(70, 132, 255, 0.12); }
+.system-icon-purple { color: #b995ff; background: rgba(145, 94, 255, 0.13); }
+.system-icon-green { color: #5fe0a1; background: rgba(56, 211, 137, 0.12); }
+.system-icon-amber { color: #ffd166; background: rgba(255, 193, 7, 0.12); }
+.system-status { color: var(--site-muted); font-family: "Montserrat", sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
+.system-card h3 { margin-bottom: 0.65rem; color: var(--site-text); font-size: 1.35rem; }
+.system-card p, .system-card li { color: var(--site-muted); font-size: 0.92rem; }
+.system-card ul { margin: 1.1rem 0 1.25rem; padding-left: 1.15rem; }
+.system-card li { margin-bottom: 0.35rem; }
+.system-card li::marker { color: var(--site-cyan); }
+.system-card-compact p { min-height: 4.2rem; }
+.system-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: auto; }
+.system-tags span { padding: 0.28rem 0.55rem; border: 1px solid var(--site-border); border-radius: 999px; color: #b8d4e3; background: rgba(255, 255, 255, 0.025); font-family: "Montserrat", sans-serif; font-size: 0.66rem; }
+.systems-note { margin: 0.75rem auto 0; font-size: 0.82rem; }
+
+@media (max-width: 767.98px) {
+  .systems-intro { display: block; }
+  .systems-intro-mark { margin-bottom: 1rem; }
+  .system-card-compact p { min-height: 0; }
 }
