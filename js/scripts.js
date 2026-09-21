@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const closeModal = modal => {
         if (!modal) return;
-        modal.classList.remove('is-open');
+        modal.classList.remove('is-open', 'show');
         modal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('modal-open');
         if (backdrop) {
@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Use the same modal classes and markup as My Projects, but control the transition
     // explicitly so static-file and hosted deployments behave identically.
     document.addEventListener('click', event => {
-        const trigger = event.target.closest('[data-bs-toggle="modal"]');
+        const trigger = event.target.closest('.portfolio-link, .system-inspect');
         if (trigger) {
             event.preventDefault();
             event.stopImmediatePropagation();
